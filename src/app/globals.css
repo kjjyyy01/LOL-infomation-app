@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: "GowunBatang";
-  src: url("/src/public/fonts/GowunBatang/GowunBatang-Regular.ttf") format("truetype");
-  font-weight: 100;
+  src: url("/fonts/GowunBatang/GowunBatang-Regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
