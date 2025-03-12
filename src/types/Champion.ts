@@ -1,8 +1,3 @@
-type Image = {
-  full: string;
-  group: string;
-};
-
 type Spells = {
   name: string;
   description: string;
@@ -12,13 +7,23 @@ type Spells = {
 export type Champion = {
   name: string;
   title: string;
-  image: Image;
+  image: {
+    full: string;
+  };
+};
+
+export type ChampionType = {
+  data: {
+    [id: string]: Champion;
+  };
 };
 
 export type ChampionDetail = {
   name: string;
   title: string;
   lore: string;
-  image: Image;
+  image: {
+    full: string;
+  };
   spells: Spells[];
 };
