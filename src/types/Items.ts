@@ -9,7 +9,7 @@ export type Item = {
   };
 };
 
-export type ItemData = {
+export type ItemType = {
   data: {
     [id: string]: Item;
   };

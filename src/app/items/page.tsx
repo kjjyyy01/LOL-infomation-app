@@ -1,13 +1,20 @@
 import ItemList from "@/components/ItemList";
+import { Item } from "@/types/Items";
 import { fetchItemsData } from "@/utils/serverApi";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "League of Legend Items",
+  description: "League of Legend Items Information",
+};
 
 const ItemsPage = async () => {
   const { ItemsData } = await fetchItemsData();
-  const arrItemsData = Object.values(ItemsData.data);
+  const arrItemsData: Item[] = Object.values(ItemsData.data);
 
   return (
     <div>
-      <h1>ItemsPage</h1>
+      <h1>아이템</h1>
       <ul>
         {arrItemsData.map((item) => {
           return <ItemList key={item.name} item={item} />;
