@@ -1,7 +1,7 @@
 "use server";
 
-import { VERSIONS_API_URL } from "@/constants/url";
-import { ChampionType } from "@/types/Champion";
+import { BASE_URL, VERSIONS_API_URL } from "@/constants/url";
+import { ChampionDetailType, ChampionType } from "@/types/Champion";
 import { ItemType } from "@/types/Items";
 
 export const fetchVersionData = async (): Promise<string> => {
@@ -18,7 +18,7 @@ export const fetchVersionData = async (): Promise<string> => {
 export const fetchItemsData = async (): Promise<{ ItemsData: ItemType }> => {
   const currentVersion = await fetchVersionData();
 
-  const ItemsResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/ko_KR/item.json`, {
+  const ItemsResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/item.json`, {
     method: "GET",
     cache: "force-cache",
   });
@@ -30,17 +30,26 @@ export const fetchItemsData = async (): Promise<{ ItemsData: ItemType }> => {
 export const fetchChampionsData = async (): Promise<{ championsData: ChampionType }> => {
   const currentVersion = await fetchVersionData();
 
-  const championsResponse = await fetch(
-    `https://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/ko_KR/champion.json`,
-    {
-      method: "GET",
-      next: {
-        revalidate: 86400,
-      },
-    }
-  );
+  const championsResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/champion.json`, {
+    method: "GET",
+    next: {
+      revalidate: 86400,
+    },
+  });
   const championsData: ChampionType = await championsResponse.json();
-  console.log(championsData);
 
   return { championsData };
+};
+
+export const fetchChampionsDetailData = async (cid: string): Promise<{ championsDetailData: ChampionDetailType }> => {
+  const currentVersion = await fetchVersionData();
+
+  const championsDetailResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/champion/${cid}.json`, {
+    method: "GET",
+    cache: "no-store",
+  });
+
+  const championsDetailData: ChampionDetailType = await championsDetailResponse.json();
+
+  return { championsDetailData };
 };
