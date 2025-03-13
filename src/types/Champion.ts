@@ -1,10 +1,5 @@
-type Spells = {
-  name: string;
-  description: string;
-  tooltip: string;
-};
-
 export type Champion = {
+  id: string;
   name: string;
   title: string;
   image: {
@@ -18,7 +13,25 @@ export type ChampionType = {
   };
 };
 
+export type Spells = {
+  id: string;
+  name: string;
+  description: string;
+  image: {
+    full: string;
+  };
+};
+
+export type Passive = {
+  name: string;
+  description: string;
+  image: {
+    full: string;
+  };
+};
+
 export type ChampionDetail = {
+  id: string;
   name: string;
   title: string;
   lore: string;
@@ -26,4 +39,17 @@ export type ChampionDetail = {
     full: string;
   };
   spells: Spells[];
+  passive: Passive;
+};
+
+export type ChampionDetailType = {
+  data: {
+    [id: string]: ChampionDetail;
+  };
+};
+
+export type ChampionsDetailPageProps = {
+  params: {
+    id: string;
+  };
 };
