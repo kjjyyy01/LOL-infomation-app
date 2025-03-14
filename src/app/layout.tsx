@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Provider from "./provider";
 
 export const metadata: Metadata = {
   title: "League of Legend Info",
@@ -21,7 +22,7 @@ export default function RootLayout({
           <Link href={"/rotation"}>로테이션</Link>
           <Link href={"/items"}>아이템</Link>
         </nav>
-        {children}
+        <Provider>{children}</Provider>
       </body>
       <footer className="sticky bottom-10">
         LOLI is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially
