@@ -35,25 +35,26 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
       </section>
       <section>
         <h1>패시브</h1>
-        <h4>{passive.name}</h4>
         <Image
           src={`${BASE_URL}/cdn/${currentVersion}/img/passive/${passive.image.full}`}
           alt={passive.image.full}
           width={100}
           height={100}
         />
-        <h1>스킬</h1>
+        <h4>{passive.name}</h4>
+        <p>{passive.description}</p>
+        <h1>스킬(Q,W,E,R 순서)</h1>
         <ul>
           {spells.map((spell) => {
             return (
               <li key={spell.id}>
-                <h4>{spell.name}</h4>
                 <Image
                   src={`${BASE_URL}/cdn/${currentVersion}/img/spell/${spell.image.full}`}
                   alt={spell.name}
                   width={100}
                   height={100}
                 />
+                <h4>{spell.name}</h4>
                 <p>{spell.description}</p>
               </li>
             );
