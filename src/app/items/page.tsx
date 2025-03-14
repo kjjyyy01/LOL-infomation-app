@@ -4,7 +4,7 @@ import { fetchItemsData } from "@/utils/serverApi";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "League of Legend Items",
+  title: "LOLI Items",
   description: "League of Legend Items Information",
 };
 

@@ -1,7 +1,13 @@
 import { BASE_URL } from "@/constants/url";
 import { ChampionDetail, ChampionsDetailPageProps, Passive, Spells } from "@/types/Champion";
 import { fetchChampionsDetailData, fetchVersionData } from "@/utils/serverApi";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "LOLI Champion Detail",
+  description: "League of Legend Champion Detail Information",
+};
 
 const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
   const currentVersion = await fetchVersionData();
