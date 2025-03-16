@@ -1,3 +1,6 @@
+import { fetchVersionData } from "@/utils/serverApi";
+import React from "react";
+import RotationPage from "./clientPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,8 +8,13 @@ export const metadata: Metadata = {
   description: "League of Legend Rotation Information",
 };
 
-const RotationPage = () => {
-  return <div>RotationPage</div>;
+const Rotation = async () => {
+  const currentVersion: string = await fetchVersionData();
+  return (
+    <div>
+      <RotationPage currentVersion={currentVersion} />
+    </div>
+  );
 };
 
-export default RotationPage;
+export default Rotation;
