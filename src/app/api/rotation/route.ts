@@ -21,9 +21,9 @@ export async function GET() {
 
   const { championsData } = await fetchChampionsData();
   const arrChampionsData: Champion[] = Object.values(championsData.data);
-  const freeChampionIds = data.freeChampionIds || [];
+  const freeChampionIds = data.freeChampionIds;
   const rotationChampions: Champion[] = arrChampionsData.filter((champion) =>
-    freeChampionIds.includes(Number(champion.key))
+    (freeChampionIds || []).includes(Number(champion.key))
   );
 
   return NextResponse.json(rotationChampions);
