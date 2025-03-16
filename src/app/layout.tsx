@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Providers from "./provider";
 
 export const metadata: Metadata = {
   title: "League of Legend Info",
@@ -21,13 +22,13 @@ export default function RootLayout({
           <Link href={"/rotation"}>로테이션</Link>
           <Link href={"/items"}>아이템</Link>
         </nav>
-        {children}
+        <Providers>{children}</Providers>
+        <footer className="sticky bottom-10">
+          LOLI is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone
+          officially involved in producing or managing Riot Games properties. Riot Games and all associated properties
+          are trademarks or registered trademarks of Riot Games, Inc.
+        </footer>
       </body>
-      <footer className="sticky bottom-10">
-        LOLI is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially
-        involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks
-        or registered trademarks of Riot Games, Inc.
-      </footer>
     </html>
   );
 }
