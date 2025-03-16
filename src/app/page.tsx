@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center gap-6 my-6">
-      <h1 className="text-5xl text-page_title_color">LOLI</h1>
+      <h1>LOLI</h1>
       <p className="text-center text-lg">
         League of Legend Information에 오신것을 환영합니다.
         <br /> 최신 리그오브레전드 챔피언과 아이템 정보를 한눈에 볼 수 있습니다.

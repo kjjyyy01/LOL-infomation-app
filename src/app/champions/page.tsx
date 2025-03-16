@@ -13,7 +13,7 @@ const ChampionsPage = async () => {
   const arrChampionsData: Champion[] = Object.values(championsData.data);
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-6 my-6">
       <h1>챔피언</h1>
       <ul>
         {arrChampionsData.map((champion) => {
