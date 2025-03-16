@@ -1,3 +1,4 @@
+import { TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { Champion } from "@/types/Champion";
 import { fetchVersionData } from "@/utils/serverApi";
@@ -14,7 +15,7 @@ const ChampionsList = async ({ champion }: { champion: Champion }) => {
       <li key={champion.name}>
         <Image src={championImageURL} alt={champion.name} width={100} height={100} />
         <h3>{champion.name}</h3>
-        <p>{champion.title}</p>
+        <p className={TEXT_CENTER}>{champion.title}</p>
       </li>
     </Link>
   );

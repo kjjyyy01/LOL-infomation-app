@@ -11,4 +11,25 @@
 
 body {
   font-family: "GowunBatang", serif;
+  @apply text-text bg-background;
+}
+
+h1 {
+  @apply text-5xl text-page_title_color;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+ul {
+  @apply flex flex-row flex-wrap justify-center items-baseline gap-6;
+}
+
+li {
+  @apply flex flex-col justify-center items-center gap-1 w-32;
 }
