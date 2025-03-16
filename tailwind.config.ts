@@ -12,6 +12,7 @@ const config: Config = {
         background: "#d5def5",
         nav_background: "#8594e4",
         text: "#141010",
+        page_title_color: "#6643b5",
       },
     },
   },
