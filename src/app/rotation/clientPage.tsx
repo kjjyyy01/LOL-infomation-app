@@ -15,7 +15,7 @@ const RotationPage = ({ currentVersion }: { currentVersion: string }) => {
   }
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-6 my-6">
       <h1>로테이션</h1>
       <ul>
         {rotationData.map((champion) => {
