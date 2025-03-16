@@ -1,6 +1,8 @@
 import ChampionsList from "@/components/ChampionsList";
+import { FLEX_COL_CENTER } from "@/constants/style";
 import { Champion } from "@/types/Champion";
 import { fetchChampionsData } from "@/utils/serverApi";
+import clsx from "clsx";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ const ChampionsPage = async () => {
   const arrChampionsData: Champion[] = Object.values(championsData.data);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 my-6">
+    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
       <h1>챔피언</h1>
       <ul>
         {arrChampionsData.map((champion) => {

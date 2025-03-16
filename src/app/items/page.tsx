@@ -1,6 +1,8 @@
 import ItemList from "@/components/ItemList";
+import { FLEX_COL_CENTER } from "@/constants/style";
 import { Item } from "@/types/Items";
 import { fetchItemsData } from "@/utils/serverApi";
+import clsx from "clsx";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ const ItemsPage = async () => {
   const arrItemsData: Item[] = Object.values(ItemsData.data);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 my-6">
+    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
       <h1>아이템</h1>
       <ul>
         {arrItemsData.map((item) => {

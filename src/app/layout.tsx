@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import Providers from "./provider";
+import { NAV_MENUS } from "@/constants/navigate";
+import { HOVER_LINK } from "@/constants/style";
 
 export const metadata: Metadata = {
   title: "League of Legend Info",
@@ -17,16 +19,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <nav className="flex flex-row justify-around bg-nav_background p-4">
-          <Link href={"/"} className="hover:underline">
+          <Link href={NAV_MENUS.HOME.to} className={HOVER_LINK}>
             홈
           </Link>
-          <Link href={"/champions"} className="hover:underline">
+          <Link href={NAV_MENUS.CHAMPIONS.to} className={HOVER_LINK}>
             챔피언
           </Link>
-          <Link href={"/rotation"} className="hover:underline">
+          <Link href={NAV_MENUS.ROTATION.to} className={HOVER_LINK}>
             로테이션
           </Link>
-          <Link href={"/items"} className="hover:underline">
+          <Link href={NAV_MENUS.ITEMS.to} className={HOVER_LINK}>
             아이템
           </Link>
         </nav>

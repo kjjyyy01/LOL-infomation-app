@@ -1,7 +1,9 @@
 "use client";
 
 import RotationChampionList from "@/components/RotationChampionList";
+import { FLEX_COL_CENTER } from "@/constants/style";
 import { useFetchRotationFunction } from "@/hooks/useFetchRotationQuery";
+import clsx from "clsx";
 
 const RotationPage = ({ currentVersion }: { currentVersion: string }) => {
   const { data: rotationData, isPending, isError } = useFetchRotationFunction();
@@ -15,7 +17,7 @@ const RotationPage = ({ currentVersion }: { currentVersion: string }) => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 my-6">
+    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
       <h1>로테이션</h1>
       <ul>
         {rotationData.map((champion) => {

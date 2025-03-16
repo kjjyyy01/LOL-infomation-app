@@ -1,4 +1,4 @@
-import { FLEX_COL_CENTER, WRAPPER_STYLE } from "@/constants/style";
+import { FLEX_COL_CENTER, SPELL_WRAPPER_STYLE, TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { ChampionDetail, ChampionsDetailPageProps, Passive, Spells } from "@/types/Champion";
 import { fetchChampionsDetailData, fetchVersionData } from "@/utils/serverApi";
@@ -30,7 +30,7 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
               <Image src={itemImageURL} alt={champion.name} width={100} height={100} className="w-[700px]" />
               <h3>{champion.name}</h3>
               <p>{champion.title}</p>
-              <p className="text-center">{champion.lore}</p>
+              <p className={TEXT_CENTER}>{champion.lore}</p>
             </div>
           );
         })}
@@ -38,7 +38,7 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
       <section className={clsx(FLEX_COL_CENTER, "gap-6")}>
         <h2>스킬(패시브, Q, W, E, R 순서)</h2>
         <section className="flex flex-row justify-center items-center">
-          <div className={WRAPPER_STYLE}>
+          <div className={SPELL_WRAPPER_STYLE}>
             <Image
               src={`${BASE_URL}/cdn/${currentVersion}/img/passive/${passive.image.full}`}
               alt={passive.image.full}
@@ -50,7 +50,7 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
           </div>
           {spells.map((spell) => {
             return (
-              <div key={spell.id} className={WRAPPER_STYLE}>
+              <div key={spell.id} className={SPELL_WRAPPER_STYLE}>
                 <Image
                   src={`${BASE_URL}/cdn/${currentVersion}/img/spell/${spell.image.full}`}
                   alt={spell.name}
