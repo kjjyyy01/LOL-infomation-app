@@ -6,6 +6,19 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "flex",
+    "flex-col",
+    "justify-center",
+    "items-center",
+    "gap-1",
+    "border-2",
+    "border-black",
+    "p-2",
+    "mx-2",
+    "text-center",
+    "hover:underline",
+  ],
   theme: {
     extend: {
       colors: {
