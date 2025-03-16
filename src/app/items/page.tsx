@@ -13,7 +13,7 @@ const ItemsPage = async () => {
   const arrItemsData: Item[] = Object.values(ItemsData.data);
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-6 my-6">
       <h1>아이템</h1>
       <ul>
         {arrItemsData.map((item) => {

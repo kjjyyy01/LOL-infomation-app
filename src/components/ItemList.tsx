@@ -8,12 +8,13 @@ const ItemList = async ({ item }: { item: Item }) => {
   const currentVersion = await fetchVersionData();
   const itemsImageFileName: string = item.image.full;
   const itemImageURL: string = `${BASE_URL}/cdn/${currentVersion}/img/item/${itemsImageFileName}`;
+
   return (
     <li>
       <Image src={itemImageURL} alt={item.name} width={100} height={100} />
       <h3>{item.name}</h3>
-      <p>{item.plaintext}</p>
-      <p>{item.gold.total} gold</p>
+      <p className="text-center">{item.plaintext}</p>
+      <p>{item.gold.total}🪙</p>
     </li>
   );
 };

@@ -19,9 +19,9 @@ h1 {
 }
 
 ul {
-  @apply flex flex-row flex-wrap justify-center gap-6;
+  @apply flex flex-row flex-wrap justify-center items-baseline gap-6;
 }
 
 li {
-  @apply flex flex-col justify-center items-center w-32 h-auto;
+  @apply flex flex-col justify-center items-center gap-1 w-32;
 }
