@@ -17,18 +17,18 @@ export default function Home() {
         <br /> 필요한 정보가 있다면, 찾아보세요!!
       </p>
       <Link href={"/champions"}>
-        <Image src={"/image/homeImage1.png"} alt="챔피언 페이지 링크 이미지" width={500} height={100} />
         챔피언
+        <Image src={"/image/homeImage1.png"} alt="챔피언 페이지 링크 이미지" width={500} height={100} />
       </Link>
       <br />
       <Link href={"/items"}>
-        <Image src={"/image/homeImage2.png"} alt="아이템 페이지 링크 이미지" width={500} height={100} />
         아이템
+        <Image src={"/image/homeImage2.png"} alt="아이템 페이지 링크 이미지" width={500} height={100} />
       </Link>
       <br />
       <Link href={"/rotation"}>
-        <Image src={"/image/homeImage3.png"} alt="로테이션 페이지 링크 이미지" width={500} height={100} />
         로테이션
+        <Image src={"/image/homeImage3.png"} alt="로테이션 페이지 링크 이미지" width={500} height={100} />
       </Link>
     </div>
   );

@@ -11,4 +11,6 @@
 
 body {
   font-family: "GowunBatang", serif;
+  @apply text-text;
+  @apply bg-background;
 }

@@ -16,14 +16,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="flex flex-row justify-around">
-          <Link href={"/"}>홈</Link>
-          <Link href={"/champions"}>챔피언</Link>
-          <Link href={"/rotation"}>로테이션</Link>
-          <Link href={"/items"}>아이템</Link>
+        <nav className="flex flex-row justify-around bg-nav_background p-4">
+          <Link href={"/"} className="hover:underline">
+            홈
+          </Link>
+          <Link href={"/champions"} className="hover:underline">
+            챔피언
+          </Link>
+          <Link href={"/rotation"} className="hover:underline">
+            로테이션
+          </Link>
+          <Link href={"/items"} className="hover:underline">
+            아이템
+          </Link>
         </nav>
         <Providers>{children}</Providers>
-        <footer className="sticky bottom-10">
+        <footer className="sticky bottom-4 bg-nav_background m-4 p-4 rounded-lg text-center">
           LOLI is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone
           officially involved in producing or managing Riot Games properties. Riot Games and all associated properties
           are trademarks or registered trademarks of Riot Games, Inc.
