@@ -10,7 +10,7 @@ const RotationChampionList = ({ champion, currentVersion }: { champion: Champion
   const championImageURL: string = `${BASE_URL}/cdn/${currentVersion}/img/champion/${championsImageFileName}`;
 
   return (
-    <Link href={`/rotation/${champion.id}`}>
+    <Link href={`/champions/${champion.id}`}>
       <li key={champion.name}>
         <Image src={championImageURL} alt={champion.name} width={100} height={100} />
         <h3>{champion.name}</h3>
