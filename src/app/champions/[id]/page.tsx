@@ -37,7 +37,7 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
       </section>
       <section className={clsx(FLEX_COL_CENTER, "gap-6")}>
         <h2>스킬(패시브, Q, W, E, R 순서)</h2>
-        <section className="flex flex-row justify-center items-center">
+        <section className="flex flex-row justify-center items-stretch">
           <div className={SPELL_WRAPPER_STYLE}>
             <Image
               src={`${BASE_URL}/cdn/${currentVersion}/img/passive/${passive.image.full}`}
