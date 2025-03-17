@@ -1,7 +1,8 @@
 import { FLEX_COL_CENTER, SPELL_WRAPPER_STYLE, TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { ChampionDetail, ChampionsDetailPageProps, Passive, Spells } from "@/types/Champion";
-import { fetchChampionsDetailData, fetchVersionData } from "@/utils/serverApi";
+import { fetchChampionsDetailData } from "@/utils/serverActions/fetchChampionsDetailData";
+import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import clsx from "clsx";
 import { Metadata } from "next";
 import Image from "next/image";

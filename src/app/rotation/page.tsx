@@ -1,7 +1,7 @@
-import { fetchVersionData } from "@/utils/serverApi";
 import React from "react";
 import RotationPage from "./clientPage";
 import { Metadata } from "next";
+import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 
 export const metadata: Metadata = {
   title: "LOLI Rotation",

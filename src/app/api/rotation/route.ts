@@ -2,7 +2,7 @@ import { API_KEY } from "@/constants/apiKey";
 import { RIOT_DEVELOPER_ORIGIN_URL, ROTATION_API_URL } from "@/constants/url";
 import { Champion } from "@/types/Champion";
 import { ChampionRotation } from "@/types/ChampionRotation";
-import { fetchChampionsData } from "@/utils/serverApi";
+import { fetchChampionsData } from "@/utils/serverActions/fetchChampionsData";
 import { NextResponse } from "next/server";
 
 export async function GET() {

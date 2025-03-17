@@ -1,7 +1,7 @@
 import { TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { Champion } from "@/types/Champion";
-import { fetchVersionData } from "@/utils/serverApi";
+import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import Image from "next/image";
 import Link from "next/link";
 
