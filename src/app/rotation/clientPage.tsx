@@ -2,7 +2,7 @@
 
 import RotationChampionList from "@/components/RotationChampionList";
 import { FLEX_COL_CENTER } from "@/constants/style";
-import { useFetchRotationFunction } from "@/hooks/useFetchRotationQuery";
+import { useFetchRotationFunction } from "@/hooks/query/useFetchRotationQuery";
 import clsx from "clsx";
 
 const RotationPage = ({ currentVersion }: { currentVersion: string }) => {

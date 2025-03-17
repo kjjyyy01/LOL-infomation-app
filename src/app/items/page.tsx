@@ -1,7 +1,7 @@
 import ItemList from "@/components/ItemList";
 import { FLEX_COL_CENTER } from "@/constants/style";
 import { Item } from "@/types/Items";
-import { fetchItemsData } from "@/utils/serverApi";
+import { fetchItemsData } from "@/utils/serverActions/fetchItemsData";
 import clsx from "clsx";
 import { Metadata } from "next";
 

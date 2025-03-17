@@ -1,12 +1,13 @@
 "use client";
 
+import { STALE_TIME } from "@/constants/staleTime";
 import { isServer, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function makeQueryClient() {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 60 * 1000,
+        staleTime: STALE_TIME * 60,
       },
     },
   });

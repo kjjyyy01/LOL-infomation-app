@@ -1,7 +1,7 @@
 import ChampionsList from "@/components/ChampionsList";
 import { FLEX_COL_CENTER } from "@/constants/style";
 import { Champion } from "@/types/Champion";
-import { fetchChampionsData } from "@/utils/serverApi";
+import { fetchChampionsData } from "@/utils/serverActions/fetchChampionsData";
 import clsx from "clsx";
 import { Metadata } from "next";
 

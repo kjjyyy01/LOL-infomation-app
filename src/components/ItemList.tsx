@@ -1,7 +1,8 @@
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 import { TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { Item } from "@/types/Items";
-import { fetchVersionData } from "@/utils/serverApi";
+import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import Image from "next/image";
 import React from "react";
 
@@ -12,7 +13,7 @@ const ItemList = async ({ item }: { item: Item }) => {
 
   return (
     <li>
-      <Image src={itemImageURL} alt={item.name} width={100} height={100} />
+      <Image src={itemImageURL} alt={item.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
       <h3>{item.name}</h3>
       <p className={TEXT_CENTER}>{item.plaintext}</p>
       <p>{item.gold.total}🪙</p>
