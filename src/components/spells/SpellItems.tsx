@@ -1,3 +1,4 @@
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 import { SPELL_WRAPPER_STYLE } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { Spells } from "@/types/Champion";
@@ -9,8 +10,8 @@ const SpellItems = ({ spell, currentVersion }: { spell: Spells; currentVersion: 
       <Image
         src={`${BASE_URL}/cdn/${currentVersion}/img/spell/${spell.image.full}`}
         alt={spell.name}
-        width={100}
-        height={100}
+        width={IMAGE_WIDTH}
+        height={IMAGE_HEIGHT}
       />
       <h3>{spell.name}</h3>
       <p className="text-start">{spell.description}</p>

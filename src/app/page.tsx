@@ -1,3 +1,4 @@
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 import { FLEX_COL_CENTER, HOVER_LINK } from "@/constants/style";
 import clsx from "clsx";
 import { Metadata } from "next";
@@ -21,17 +22,32 @@ export default function Home() {
       <section>
         <Link href={"/champions"} className={HOVER_LINK}>
           챔피언
-          <Image src={"/image/homeImage1.png"} alt="챔피언 페이지 링크 이미지" width={500} height={100} />
+          <Image
+            src={"/image/homeImage1.png"}
+            alt="챔피언 페이지 링크 이미지"
+            width={IMAGE_WIDTH * 5}
+            height={IMAGE_HEIGHT}
+          />
         </Link>
         <br />
         <Link href={"/items"} className={HOVER_LINK}>
           아이템
-          <Image src={"/image/homeImage2.png"} alt="아이템 페이지 링크 이미지" width={500} height={100} />
+          <Image
+            src={"/image/homeImage2.png"}
+            alt="아이템 페이지 링크 이미지"
+            width={IMAGE_WIDTH * 5}
+            height={IMAGE_HEIGHT}
+          />
         </Link>
         <br />
         <Link href={"/rotation"} className={HOVER_LINK}>
           로테이션
-          <Image src={"/image/homeImage3.png"} alt="로테이션 페이지 링크 이미지" width={500} height={100} />
+          <Image
+            src={"/image/homeImage3.png"}
+            alt="로테이션 페이지 링크 이미지"
+            width={IMAGE_WIDTH * 5}
+            height={IMAGE_HEIGHT}
+          />
         </Link>
       </section>
     </div>

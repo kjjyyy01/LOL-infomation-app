@@ -1,3 +1,4 @@
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 import { FLEX_COL_CENTER, TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { ChampionDetail } from "@/types/Champion";
@@ -9,7 +10,7 @@ const ChampionsDetailItems = ({ champion, id }: { champion: ChampionDetail; id: 
 
   return (
     <div className={clsx(FLEX_COL_CENTER, "gap-4")}>
-      <Image src={itemImageURL} alt={champion.name} width={100} height={100} className="w-[700px]" />
+      <Image src={itemImageURL} alt={champion.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} className="w-[700px]" />
       <h3>{champion.name}</h3>
       <p>{champion.title}</p>
       <p className={TEXT_CENTER}>{champion.lore}</p>

@@ -1,3 +1,4 @@
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 import { TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { Champion } from "@/types/Champion";
@@ -13,7 +14,7 @@ const ChampionsList = async ({ champion }: { champion: Champion }) => {
   return (
     <Link href={`/champions/${champion.id}`}>
       <li key={champion.name}>
-        <Image src={championImageURL} alt={champion.name} width={100} height={100} />
+        <Image src={championImageURL} alt={champion.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
         <h3>{champion.name}</h3>
         <p className={TEXT_CENTER}>{champion.title}</p>
       </li>

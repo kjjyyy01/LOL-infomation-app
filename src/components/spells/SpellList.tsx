@@ -4,6 +4,7 @@ import { ChampionDetail, Passive, Spells } from "@/types/Champion";
 import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import Image from "next/image";
 import SpellItems from "./SpellItems";
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 
 const SpellList = async ({ arrChampionsDetailData }: { arrChampionsDetailData: ChampionDetail[] }) => {
   const currentVersion = await fetchVersionData();
@@ -16,8 +17,8 @@ const SpellList = async ({ arrChampionsDetailData }: { arrChampionsDetailData: C
         <Image
           src={`${BASE_URL}/cdn/${currentVersion}/img/passive/${passive.image.full}`}
           alt={passive.image.full}
-          width={100}
-          height={100}
+          width={IMAGE_WIDTH}
+          height={IMAGE_HEIGHT}
         />
         <h3>{passive.name}</h3>
         <p className="text-start">{passive.description}</p>
