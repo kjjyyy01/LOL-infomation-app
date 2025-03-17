@@ -18,38 +18,54 @@ export const fetchVersionData = async (): Promise<string> => {
 export const fetchItemsData = async (): Promise<{ ItemsData: ItemType }> => {
   const currentVersion = await fetchVersionData();
 
-  const ItemsResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/item.json`, {
-    method: "GET",
-    cache: "force-cache",
-  });
-  const ItemsData: ItemType = await ItemsResponse.json();
+  try {
+    const ItemsResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/item.json`, {
+      method: "GET",
+      cache: "force-cache",
+    });
+    const ItemsData: ItemType = await ItemsResponse.json();
 
-  return { ItemsData };
+    return { ItemsData };
+  } catch (error) {
+    console.error("아이템 데이터를 불러오는 중 오류가 발생했습니다.", error);
+    throw new Error("아이템 데이터를 불러오는 중 오류가 발생했습니다.");
+  }
 };
 
 export const fetchChampionsData = async (): Promise<{ championsData: ChampionType }> => {
   const currentVersion = await fetchVersionData();
 
-  const championsResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/champion.json`, {
-    method: "GET",
-    next: {
-      revalidate: 86400,
-    },
-  });
-  const championsData: ChampionType = await championsResponse.json();
+  try {
+    const championsResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/champion.json`, {
+      method: "GET",
+      next: {
+        revalidate: 86400,
+      },
+    });
 
-  return { championsData };
+    const championsData: ChampionType = await championsResponse.json();
+
+    return { championsData };
+  } catch (error) {
+    console.error("챔피언 데이터를 불러오는 중 오류가 발생했습니다.", error);
+    throw new Error("챔피언 데이터를 불러오는 중 오류가 발생했습니다.");
+  }
 };
 
 export const fetchChampionsDetailData = async (cid: string): Promise<{ championsDetailData: ChampionDetailType }> => {
   const currentVersion = await fetchVersionData();
 
-  const championsDetailResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/champion/${cid}.json`, {
-    method: "GET",
-    cache: "no-store",
-  });
+  try {
+    const championsDetailResponse = await fetch(`${BASE_URL}/cdn/${currentVersion}/data/ko_KR/champion/${cid}.json`, {
+      method: "GET",
+      cache: "no-store",
+    });
 
-  const championsDetailData: ChampionDetailType = await championsDetailResponse.json();
+    const championsDetailData: ChampionDetailType = await championsDetailResponse.json();
 
-  return { championsDetailData };
+    return { championsDetailData };
+  } catch (error) {
+    console.error("챔피언 상세정보 데이터를 불러오는 중 오류가 발생했습니다.", error);
+    throw new Error("챔피언 상세정보 데이터를 불러오는 중 오류가 발생했습니다.");
+  }
 };
