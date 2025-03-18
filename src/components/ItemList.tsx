@@ -14,7 +14,7 @@ const ItemList = ({ item, currentVersion }: { item: Item; currentVersion: string
     <li>
       <Image src={itemImageURL} alt={item.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
       <h3>{item.name}</h3>
-      <p className={clsx(TEXT_CENTER)}>{item.plaintext}</p>
+      <p className={clsx(TEXT_CENTER, "md:block", "hidden")}>{item.plaintext}</p>
       <p>{item.gold.total}🪙</p>
     </li>
   );

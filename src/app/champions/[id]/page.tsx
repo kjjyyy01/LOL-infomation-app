@@ -22,13 +22,12 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
   return (
     <div className={clsx(FLEX_COL_CENTER, "gap-12", " my-6")}>
       <BackButton />
-      <h1>챔피언 상세</h1>
       <section>
-        <ChampionsDetailList arrChampionsDetailData={arrChampionsDetailData} id={id} />
+        <ChampionsDetailList arrChampionsDetailData={arrChampionsDetailData} currentVersion={currentVersion} />
       </section>
       <section className={clsx(FLEX_COL_CENTER, "gap-6")}>
         <h2>스킬(패시브, Q, W, E, R 순서)</h2>
-        <section className="flex flex-row justify-center items-stretch">
+        <section className="flex flex-row justify-center items-stretch px-6">
           <SpellList arrChampionsDetailData={arrChampionsDetailData} currentVersion={currentVersion} />
         </section>
       </section>
