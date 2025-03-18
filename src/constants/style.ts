@@ -3,3 +3,5 @@ export const SPELL_WRAPPER_STYLE =
 export const FLEX_COL_CENTER = "flex flex-col justify-center items-center";
 export const TEXT_CENTER = "text-center";
 export const HOVER_LINK = "hover:underline";
+export const LOAD_STYLE = "text-center text-5xl text-page_title_color";
+export const ERROR_STYLE = "text-center text-5xl text-page_title_color";
