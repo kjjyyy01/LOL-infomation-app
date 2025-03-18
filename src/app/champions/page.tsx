@@ -17,7 +17,7 @@ const ChampionsPage = async () => {
   const arrChampionsData: Champion[] = Object.values(championsData.data);
 
   return (
-    <div className={clsx(FLEX_COL_CENTER, "gap-6", "my-6", "p-2", "")}>
+    <div className={clsx(FLEX_COL_CENTER, "gap-6", "my-6", "p-2")}>
       <h1>챔피언</h1>
       <ul>
         {arrChampionsData.map((champion) => {
