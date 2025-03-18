@@ -27,9 +27,9 @@ h2 {
 }
 
 ul {
-  @apply flex flex-row flex-wrap justify-center items-baseline gap-6;
+  @apply flex flex-row flex-wrap justify-center items-stretch gap-6;
 }
 
 li {
-  @apply flex flex-col justify-center items-center gap-1 w-32;
+  @apply flex flex-col justify-center items-center gap-1 w-48 border-2 border-border_color p-6;
 }

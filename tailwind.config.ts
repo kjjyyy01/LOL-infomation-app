@@ -26,6 +26,7 @@ const config: Config = {
         nav_background: "#8594e4",
         text: "#141010",
         page_title_color: "#6643b5",
+        border_color: "#141010",
       },
     },
   },
