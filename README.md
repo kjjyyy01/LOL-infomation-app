@@ -50,8 +50,87 @@ https://lol-infomation-app.vercel.app/
 
 ## 📁 프로젝트 구조
 
-```
 📁
+```
+lol-info-app
+├─ package-lock.json
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.mjs
+├─ 📁public
+│  ├─📁fonts
+│  │  └─📁GowunBatang
+│  │     ├─ GowunBatang-Bold.ttf
+│  │     └─ GowunBatang-Regular.ttf
+│  └─📁image
+│     ├─ homeImage1.png
+│     ├─ homeImage2.png
+│     └─ homeImage3.png
+├─ README.md
+├─📁src
+│  ├─📁app
+│  │  ├─📁api
+│  │  │  └─ rotation
+│  │  │     └─ route.ts
+│  │  ├─📁champions
+│  │  │  ├─ error.tsx
+│  │  │  ├─ loading.tsx
+│  │  │  ├─ page.tsx
+│  │  │  └─📁[id]
+│  │  │     ├─ error.tsx
+│  │  │     ├─ loading.tsx
+│  │  │     └─ page.tsx
+│  │  ├─ globals.css
+│  │  ├─ icon.png
+│  │  ├─📁items
+│  │  │  ├─ error.tsx
+│  │  │  ├─ loading.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  ├─ provider.tsx
+│  │  └─📁rotation
+│  │     ├─ clientPage.tsx
+│  │     └─ page.tsx
+│  ├─📁components
+│  │  ├─ BackButton.tsx
+│  │  ├─📁championsDetail
+│  │  │  ├─ ChampionsDetailItems.tsx
+│  │  │  └─ ChampionsDetailList.tsx
+│  │  ├─ ChampionsList.tsx
+│  │  ├─ ItemList.tsx
+│  │  ├─ RotationChampionList.tsx
+│  │  ├─📁spells
+│  │  │  ├─ SpellItems.tsx
+│  │  │  └─ SpellList.tsx
+│  │  └─📁ui
+│  │     └─ button.tsx
+│  ├─📁constants
+│  │  ├─ apiKey.ts
+│  │  ├─ imageSize.ts
+│  │  ├─ navigate.ts
+│  │  ├─ staleTime.ts
+│  │  ├─ style.ts
+│  │  └─ url.ts
+│  ├─📁hooks
+│  │  └─📁query
+│  │     └─ useFetchRotationQuery.ts
+│  ├─📁lib
+│  │  └─ utils.ts
+│  ├─📁types
+│  │  ├─ Champion.ts
+│  │  ├─ ChampionRotation.ts
+│  │  └─ Items.ts
+│  └─📁utils
+│     ├─📁routeHandler
+│     │  └─ clientApi.ts
+│     └─📁serverActions
+│        ├─ fetchChampionsData.ts
+│        ├─ fetchChampionsDetailData.ts
+│        ├─ fetchItemsData.ts
+│        └─ fetchVersionData.ts
+├─ tailwind.config.ts
+└─ tsconfig.json
 
 ```
 
