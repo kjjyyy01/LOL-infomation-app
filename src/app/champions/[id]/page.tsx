@@ -1,11 +1,14 @@
+import BackButton from "@/components/BackButton";
 import ChampionsDetailList from "@/components/championsDetail/ChampionsDetailList";
 import SpellList from "@/components/spells/SpellList";
+import { Button } from "@/components/ui/button";
 import { FLEX_COL_CENTER } from "@/constants/style";
 import { ChampionDetail, ChampionsDetailPageProps } from "@/types/Champion";
 import { fetchChampionsDetailData } from "@/utils/serverActions/fetchChampionsDetailData";
 import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import clsx from "clsx";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "LOLI Champion Detail",
@@ -20,6 +23,7 @@ const ChampionsDetailPage = async ({ params }: ChampionsDetailPageProps) => {
 
   return (
     <div className={clsx(FLEX_COL_CENTER, "gap-6", " my-6")}>
+      <BackButton />
       <h1>챔피언 상세</h1>
       <section>
         <ChampionsDetailList arrChampionsDetailData={arrChampionsDetailData} id={id} />
