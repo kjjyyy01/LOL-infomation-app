@@ -17,7 +17,7 @@ const RotationPage = ({ currentVersion }: { currentVersion: string }) => {
   }
 
   return (
-    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
+    <div className={clsx(FLEX_COL_CENTER, "gap-6", "my-6")}>
       <h1>로테이션</h1>
       <ul>
         {rotationData.map((champion) => {

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
+    <div className={clsx(FLEX_COL_CENTER, "gap-6", "my-6")}>
       <h1>LOLI</h1>
       <p className="text-center text-lg">
         League of Legend Information에 오신것을 환영합니다.
