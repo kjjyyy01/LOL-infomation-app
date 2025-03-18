@@ -1,4 +1,3 @@
-import React from "react";
 import RotationPage from "./clientPage";
 import { Metadata } from "next";
 import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
@@ -10,11 +9,7 @@ export const metadata: Metadata = {
 
 const Rotation = async () => {
   const currentVersion: string = await fetchVersionData();
-  return (
-    <div>
-      <RotationPage currentVersion={currentVersion} />
-    </div>
-  );
+  return <RotationPage currentVersion={currentVersion} />;
 };
 
 export default Rotation;

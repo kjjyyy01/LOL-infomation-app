@@ -1,4 +1,4 @@
-import { API_KEY } from "@/constants/apiKey";
+import { NEXT_PUBLIC_API_KEY } from "@/constants/apiKey";
 import { RIOT_DEVELOPER_ORIGIN_URL, ROTATION_API_URL } from "@/constants/url";
 import { Champion } from "@/types/Champion";
 import { ChampionRotation } from "@/types/ChampionRotation";
@@ -15,7 +15,7 @@ export async function GET() {
         "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
         "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
         Origin: RIOT_DEVELOPER_ORIGIN_URL,
-        "X-Riot-Token": API_KEY ?? "",
+        "X-Riot-Token": NEXT_PUBLIC_API_KEY ?? "",
       },
     });
     const data: ChampionRotation = await response.json();

@@ -2,6 +2,7 @@ import ChampionsList from "@/components/ChampionsList";
 import { FLEX_COL_CENTER } from "@/constants/style";
 import { Champion } from "@/types/Champion";
 import { fetchChampionsData } from "@/utils/serverActions/fetchChampionsData";
+import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import clsx from "clsx";
 import { Metadata } from "next";
 
@@ -11,15 +12,16 @@ export const metadata: Metadata = {
 };
 
 const ChampionsPage = async () => {
+  const currentVersion = await fetchVersionData();
   const { championsData } = await fetchChampionsData();
   const arrChampionsData: Champion[] = Object.values(championsData.data);
 
   return (
-    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
+    <div className={clsx(FLEX_COL_CENTER, "gap-6", "my-6", "p-2")}>
       <h1>챔피언</h1>
       <ul>
         {arrChampionsData.map((champion) => {
-          return <ChampionsList key={champion.name} champion={champion} />;
+          return <ChampionsList key={champion.id} champion={champion} currentVersion={currentVersion} />;
         })}
       </ul>
     </div>

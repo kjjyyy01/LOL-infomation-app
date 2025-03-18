@@ -3,15 +3,15 @@ import ChampionsDetailItems from "./ChampionsDetailItems";
 
 const ChampionsDetailList = ({
   arrChampionsDetailData,
-  id,
+  currentVersion,
 }: {
   arrChampionsDetailData: ChampionDetail[];
-  id: string;
+  currentVersion: string;
 }) => {
   return (
     <>
       {arrChampionsDetailData.map((champion) => {
-        return <ChampionsDetailItems key={champion.id} champion={champion} id={id} />;
+        return <ChampionsDetailItems key={champion.id} champion={champion} currentVersion={currentVersion} />;
       })}
     </>
   );

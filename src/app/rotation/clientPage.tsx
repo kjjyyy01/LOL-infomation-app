@@ -1,7 +1,7 @@
 "use client";
 
 import RotationChampionList from "@/components/RotationChampionList";
-import { FLEX_COL_CENTER } from "@/constants/style";
+import { ERROR_STYLE, FLEX_COL_CENTER, LOAD_STYLE } from "@/constants/style";
 import { useFetchRotationFunction } from "@/hooks/query/useFetchRotationQuery";
 import clsx from "clsx";
 
@@ -9,15 +9,15 @@ const RotationPage = ({ currentVersion }: { currentVersion: string }) => {
   const { data: rotationData, isPending, isError } = useFetchRotationFunction();
 
   if (isPending) {
-    return <div>로딩중입니다...</div>;
+    return <div className={LOAD_STYLE}>로딩중...</div>;
   }
 
   if (isError) {
-    return <div>로딩중 오류가 발생했습니다...</div>;
+    return <div className={ERROR_STYLE}>에러가 발생했습니다! 새로고침(F5) 해보세요!</div>;
   }
 
   return (
-    <div className={clsx(FLEX_COL_CENTER, "gap-6 my-6")}>
+    <div className={clsx(FLEX_COL_CENTER, "gap-6", "my-6", "p-2")}>
       <h1>로테이션</h1>
       <ul>
         {rotationData.map((champion) => {
