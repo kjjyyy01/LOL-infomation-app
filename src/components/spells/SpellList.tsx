@@ -1,13 +1,17 @@
 import { SPELL_WRAPPER_STYLE } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { ChampionDetail, Passive, Spells } from "@/types/Champion";
-import { fetchVersionData } from "@/utils/serverActions/fetchVersionData";
 import Image from "next/image";
 import SpellItems from "./SpellItems";
 import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 
-const SpellList = async ({ arrChampionsDetailData }: { arrChampionsDetailData: ChampionDetail[] }) => {
-  const currentVersion = await fetchVersionData();
+const SpellList = ({
+  arrChampionsDetailData,
+  currentVersion,
+}: {
+  arrChampionsDetailData: ChampionDetail[];
+  currentVersion: string;
+}) => {
   const spells: Spells[] = arrChampionsDetailData[0].spells;
   const passive: Passive = arrChampionsDetailData[0].passive;
 
