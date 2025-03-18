@@ -32,19 +32,11 @@ https://lol-infomation-app.vercel.app/
 
 ## ⚙ 기술 스택
 
-### Style
-
 <div>
 <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg" width="80" alt="react logo"  />
-<div />
-<br />
-    
-### Development
-<div>
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" width="80" alt="react logo"  />
 <img src="https://img.shields.io/badge/typescript-%23007ACC.svg" width="80" alt="redux logo"  />
 <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js" width="80" alt="redux logo"  />
-  
 </div>
 
 <br />
