@@ -2,6 +2,7 @@ import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
 import { TEXT_CENTER } from "@/constants/style";
 import { BASE_URL } from "@/constants/url";
 import { Champion } from "@/types/Champion";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ const ChampionsList = ({ champion, currentVersion }: { champion: Champion; curre
       <li key={champion.name} className="h-full">
         <Image src={championImageURL} alt={champion.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
         <h3>{champion.name}</h3>
-        <p className={TEXT_CENTER}>{champion.title}</p>
+        <p className={clsx(TEXT_CENTER, "text-sm")}>{champion.title}</p>
       </li>
     </Link>
   );
