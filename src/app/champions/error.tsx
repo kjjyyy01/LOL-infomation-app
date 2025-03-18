@@ -1,5 +1,6 @@
 "use client";
 
+import { ERROR_STYLE } from "@/constants/style";
 import { useEffect } from "react";
 
 export default function Error({ error }: { error: Error & { digest?: string } }) {
