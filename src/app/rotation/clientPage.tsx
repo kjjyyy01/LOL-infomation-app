@@ -1,7 +1,7 @@
 "use client";
 
 import RotationChampionList from "@/components/RotationChampionList";
-import { ERROR_STYLE, FLEX_COL_CENTER, LOAD_STYLE, TEXT_CENTER } from "@/constants/style";
+import { ERROR_STYLE, FLEX_COL_CENTER, LOAD_STYLE } from "@/constants/style";
 import { useFetchRotationFunction } from "@/hooks/query/useFetchRotationQuery";
 import clsx from "clsx";
 
