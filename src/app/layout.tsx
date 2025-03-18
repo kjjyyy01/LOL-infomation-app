@@ -34,9 +34,9 @@ export default function RootLayout({
         </nav>
         <Providers>{children}</Providers>
         <footer className="sticky bottom-4 bg-nav_background m-4 p-4 rounded-lg text-center">
-          LOLI is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone
-          officially involved in producing or managing Riot Games properties. Riot Games and all associated properties
-          are trademarks or registered trademarks of Riot Games, Inc.
+          LOLI는 Riot Games의 보증을 받지 않으며 Riot Games 또는 Riot Games 자산을 제작하거나 관리하는 데 공식적으로
+          관여한 사람의 견해나 의견을 반영하지 않습니다. Riot Games 및 모든 관련 자산은 Riot Games, Inc.의 상표 또는
+          등록 상표입니다.
         </footer>
       </body>
     </html>
