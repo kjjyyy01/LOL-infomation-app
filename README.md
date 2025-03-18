@@ -26,7 +26,13 @@ https://lol-infomation-app.vercel.app/
 
 ## 📄 기능 소개
 
-- 
+- App Routing으로 라우팅
+- Link 태그를 사용해 홈/챔피언/로테이션/아이템 페이지 이동
+- SSG 렌더링 기법으로 아이템 페이지 구현
+- ISR 렌더링 기법으로 챔피언 페이지 구현
+- SSR 렌더링 기법으로 챔피언 상세 페이지 구현
+- CSR로 로테이션 페이지 구현
+- Route Handler/ Server Action을 사용한 데이터 fetch로직 작성
 
 <br />
 
