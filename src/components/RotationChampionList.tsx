@@ -19,7 +19,7 @@ const RotationChampionList = ({
 
   return (
     <Link href={`/champions/${champion.id}`}>
-      <li key={champion.name}>
+      <li key={champion.name} className="hover:scale-110">
         <Image src={championImageURL} alt={champion.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
         <h3>{champion.name}</h3>
         <p className={TEXT_CENTER}>{champion.title}</p>

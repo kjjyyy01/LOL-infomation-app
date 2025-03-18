@@ -1,5 +1,5 @@
 import { IMAGE_HEIGHT, IMAGE_WIDTH } from "@/constants/imageSize";
-import { FLEX_COL_CENTER, HOVER_LINK } from "@/constants/style";
+import { FLEX_COL_CENTER, HOVER_HOME_IMG, HOVER_LINK } from "@/constants/style";
 import clsx from "clsx";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -27,6 +27,7 @@ export default function Home() {
             alt="챔피언 페이지 링크 이미지"
             width={IMAGE_WIDTH * 5}
             height={IMAGE_HEIGHT}
+            className={HOVER_HOME_IMG}
           />
         </Link>
         <br />
@@ -37,6 +38,7 @@ export default function Home() {
             alt="아이템 페이지 링크 이미지"
             width={IMAGE_WIDTH * 5}
             height={IMAGE_HEIGHT}
+            className={HOVER_HOME_IMG}
           />
         </Link>
         <br />
@@ -47,6 +49,7 @@ export default function Home() {
             alt="로테이션 페이지 링크 이미지"
             width={IMAGE_WIDTH * 5}
             height={IMAGE_HEIGHT}
+            className={HOVER_HOME_IMG}
           />
         </Link>
       </section>
