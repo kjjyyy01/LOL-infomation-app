@@ -20,6 +20,9 @@ const config: Config = {
     "mx-2",
     "text-center",
     "hover:underline",
+    "hover:scale-95",
+    "text-5xl",
+    "text-page_title_color",
   ],
   theme: {
     extend: {

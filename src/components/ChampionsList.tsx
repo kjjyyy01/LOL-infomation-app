@@ -12,7 +12,7 @@ const ChampionsList = ({ champion, currentVersion }: { champion: Champion; curre
 
   return (
     <Link href={`/champions/${champion.id}`}>
-      <li key={champion.name} className="h-full hover:scale-110 ">
+      <li key={champion.name} className="h-full hover:scale-110">
         <Image src={championImageURL} alt={champion.name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
         <h3>{champion.name}</h3>
         <p className={clsx(TEXT_CENTER, "text-sm")}>{champion.title}</p>
